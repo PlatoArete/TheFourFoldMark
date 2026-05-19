@@ -1,0 +1,22 @@
+# The FourFold Mark - Git Ignore
+
+# Project Metadata
+.metadata/
+
+# IDE and Build Artifacts
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+
+# C# Compile Output
+Source/bin/
+Source/obj/
+Source/packages/
+
+# OS/System files
+Thumbs.db
+Desktop.ini
+.DS_Store

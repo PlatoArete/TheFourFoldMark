@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Air Element -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Element_Air</defName>
+    <label>Air Kinship</label>
+    <description>Sudden, evasive, explosive. Grants burst movement and rapid repositioning, but lacks sustain in long fights.</description>
+    <layerType>Element</layerType>
+    <titleSuffix>Wind</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="CleaningSpeed">0.25</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Cooking</skill>
+        <amount>3</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MoveSpeed">0.60</li>
+      <li Key="MeleeDodgeChance">0.15</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Fire Element -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Element_Fire</defName>
+    <label>Fire Kinship</label>
+    <description>Escalation, heat, momentum. Low initial impact, but builds rapidly into high-damage attack momentum.</description>
+    <layerType>Element</layerType>
+    <titleSuffix>Blaze</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="CookSpeed">0.20</li>
+      <li Key="SmeltingSpeed">0.20</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Crafting</skill>
+        <amount>3</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MeleeDamageMultiplier">0.20</li>
+      <li Key="RangedWeaponDpsMultiplier" /> <!-- We can handle custom stats via StatPart if needed -->
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Water Element -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Element_Water</defName>
+    <label>Water Kinship</label>
+    <description>Sustained force, pressure, inevitability. Slow starting speed, but builds extreme endurance and stability.</description>
+    <layerType>Element</layerType>
+    <titleSuffix>River</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="RestRateMultiplier">0.15</li>
+      <li Key="MedicalSurgerySuccessChance">0.15</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Medicine</skill>
+        <amount>3</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="ArmorRating_Sharp">0.10</li>
+      <li Key="ArmorRating_Blunt">0.10</li>
+      <li Key="MeleeDodgeChance">0.05</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+</Defs>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Dragon Divine Beast -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Beast_Dragon</defName>
+    <label>Dragon Alignment</label>
+    <description>Sovereign Breath: unleashing devastating elemental force. Strong area damage and crowd breaking.</description>
+    <layerType>DivineBeast</layerType>
+    <titleSuffix>Dragon</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="SocialImpact">0.15</li>
+    </passiveStatOffsets>
+    <combatStatOffsets>
+      <li Key="MentalBreakThreshold">-0.05</li>
+    </combatStatOffsets>
+    <grantedAbilities>
+      <li>Ability_SovereignBreath</li>
+    </grantedAbilities>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Fenghuang Divine Beast -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Beast_Fenghuang</defName>
+    <label>Fenghuang Alignment</label>
+    <description>Ashen Covenant: self-resurrection through rebirth or sacrificial party-wide restoration.</description>
+    <layerType>DivineBeast</layerType>
+    <titleSuffix>Phoenix</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="MedicalTendSpeed">0.15</li>
+    </passiveStatOffsets>
+    <combatStatOffsets>
+      <li Key="MedicalTendQuality">0.15</li>
+    </combatStatOffsets>
+    <grantedAbilities>
+      <li>Ability_SovereignImmolation</li>
+    </grantedAbilities>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Kitsune Divine Beast -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Beast_Kitsune</defName>
+    <label>Kitsune Alignment</label>
+    <description>Nine-Tail Mirage: blink displacement leaving a decoy illusion that breaks aggro.</description>
+    <layerType>DivineBeast</layerType>
+    <titleSuffix>Mirage</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="NegotiationAbility">0.15</li>
+    </passiveStatOffsets>
+    <combatStatOffsets>
+      <li Key="MeleeDodgeChance">0.20</li>
+    </combatStatOffsets>
+    <grantedAbilities>
+      <li>Ability_NineTailMirage</li>
+    </grantedAbilities>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Komainu Divine Beast -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Beast_Komainu</defName>
+    <label>Komainu Alignment</label>
+    <description>Guardian Gate: project a physical and projectile-blocking threshold barrier.</description>
+    <layerType>DivineBeast</layerType>
+    <titleSuffix>Gate</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="GeneralLaborSpeed">0.15</li>
+    </passiveStatOffsets>
+    <combatStatOffsets>
+      <li Key="ArmorRating_Sharp">0.20</li>
+    </combatStatOffsets>
+    <grantedAbilities>
+      <li>Ability_GuardianGate</li>
+    </grantedAbilities>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Basilisk Divine Beast -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Beast_Basilisk</defName>
+    <label>Basilisk Alignment</label>
+    <description>Stone-Gaze Mandate: mass stun or temporary petrification in a line of sight.</description>
+    <layerType>DivineBeast</layerType>
+    <titleSuffix>Gaze</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="ToxicResistance">0.20</li>
+    </passiveStatOffsets>
+    <combatStatOffsets>
+      <li Key="ToxicEnvironmentResistance">0.20</li>
+    </combatStatOffsets>
+    <grantedAbilities>
+      <li>Ability_StoneGaze</li>
+    </grantedAbilities>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- White Hart / Lu Divine Beast -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Beast_Lu</defName>
+    <label>White Hart Alignment</label>
+    <description>Sanctuary Path: create a path that stabilizes, speeds up, and guards allies in distress.</description>
+    <layerType>DivineBeast</layerType>
+    <titleSuffix>Hart</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="AnimalGatherSpeed">0.15</li>
+    </passiveStatOffsets>
+    <combatStatOffsets>
+      <li Key="MoveSpeed">0.50</li>
+    </combatStatOffsets>
+    <grantedAbilities>
+      <li>Ability_SanctuaryPath</li>
+    </grantedAbilities>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Stub Ability Definitions for compilation compatibility -->
+  <AbilityDef>
+    <defName>Ability_SovereignBreath</defName>
+    <label>Sovereign Breath</label>
+    <description>Unleash a supernatural cone of destructive force.</description>
+    <cooldownTicks>12000</cooldownTicks> <!-- 2 days -->
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Ability_SovereignImmolation</defName>
+    <label>Sovereign Immolation</label>
+    <description>Sacrifice the physical body to heal and stabilize all nearby allies.</description>
+    <cooldownTicks>36000</cooldownTicks> <!-- 6 days -->
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Ability_NineTailMirage</defName>
+    <label>Nine-Tail Mirage</label>
+    <description>Blink to a nearby position, leaving an illusion that attracts aggro.</description>
+    <cooldownTicks>2500</cooldownTicks>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Ability_GuardianGate</defName>
+    <label>Guardian Gate</label>
+    <description>Create a temporary force barrier protecting a chokepoint.</description>
+    <cooldownTicks>6000</cooldownTicks>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Ability_StoneGaze</defName>
+    <label>Stone-Gaze Mandate</label>
+    <description>Petrify and stun targets in a direct line of sight.</description>
+    <cooldownTicks>5000</cooldownTicks>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>Ability_SanctuaryPath</defName>
+    <label>Sanctuary Path</label>
+    <description>Create a path of protection that guides and stabilizes retreating allies.</description>
+    <cooldownTicks>4000</cooldownTicks>
+  </AbilityDef>
+
+</Defs>

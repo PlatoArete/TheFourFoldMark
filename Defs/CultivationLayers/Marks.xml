@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Ox Mark -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Mark_Ox</defName>
+    <label>Mark of the Ox</label>
+    <description>The wall, the burden-bearer, the breaker. Embraces heavy shields, hammers, mining, and construction.</description>
+    <layerType>Mark</layerType>
+    <titleSuffix>Wall</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="MiningSpeed">0.20</li>
+      <li Key="ConstructionSpeed">0.20</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Mining</skill>
+        <amount>2</amount>
+      </li>
+      <li>
+        <skill>Construction</skill>
+        <amount>2</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="ArmorRating_Sharp">0.25</li>
+      <li Key="ArmorRating_Blunt">0.25</li>
+      <li Key="MoveSpeed">-0.60</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Fox Mark -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Mark_Fox</defName>
+    <label>Mark of the Fox</label>
+    <description>The trickster, duelist, knife in the smile. Excels at evasive melee, ambush, and social manipulation.</description>
+    <layerType>Mark</layerType>
+    <titleSuffix>Shadow</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="TradePriceImprovement">0.10</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Social</skill>
+        <amount>2</amount>
+      </li>
+      <li>
+        <skill>Artistic</skill>
+        <amount>2</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MeleeDodgeChance">0.15</li>
+      <li Key="MeleeHitChance">0.10</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Raven Mark -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Mark_Raven</defName>
+    <label>Mark of the Raven</label>
+    <description>The observer, tool-warrior, hunter-scholar. Prioritizes intellectual pursuit, weak-point precision, and prepared positions.</description>
+    <layerType>Mark</layerType>
+    <titleSuffix>Scholar</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="ResearchSpeed">0.15</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Intellectual</skill>
+        <amount>2</amount>
+      </li>
+      <li>
+        <skill>Crafting</skill>
+        <amount>2</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="ShootingAccuracyPawn">2.50</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Tiger Mark -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Mark_Tiger</defName>
+    <label>Mark of the Tiger</label>
+    <description>The champion, predator, prestige warrior. Relies on melee force, intimidation, first-strike pressure, and athletic attacks.</description>
+    <layerType>Mark</layerType>
+    <titleSuffix>Claw</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="TameAnimalChance">0.15</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Social</skill>
+        <amount>2</amount>
+      </li>
+      <li>
+        <skill>Animals</skill>
+        <amount>2</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MeleeDamageMultiplier">0.25</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Wolf Mark -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Mark_Wolf</defName>
+    <label>Mark of the Wolf</label>
+    <description>The pack-fighter, raider, protector-pursuer. Strong synergy with allies, shock-and-disengage tactics, and pursuit.</description>
+    <layerType>Mark</layerType>
+    <titleSuffix>Fang</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="TrainAnimalChance">0.15</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Animals</skill>
+        <amount>2</amount>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <amount>2</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MoveSpeed">0.40</li>
+      <li Key="MeleeHitChance">0.05</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Crane Mark -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Mark_Crane</defName>
+    <label>Mark of the Crane</label>
+    <description>The graceful archer, martial artist, counterfighter. Values bow form, medical artistry, and calm fallback.</description>
+    <layerType>Mark</layerType>
+    <titleSuffix>feather</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="MedicalTendQuality">0.15</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Medical</skill>
+        <amount>2</amount>
+      </li>
+      <li>
+        <skill>Artistic</skill>
+        <amount>2</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MeleeDodgeChance">0.10</li>
+      <li Key="ShootingAccuracyPawn">1.50</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+</Defs>

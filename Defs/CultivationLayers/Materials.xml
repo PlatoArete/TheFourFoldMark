@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Wood Material -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Material_Wood</defName>
+    <label>Wood Constitution</label>
+    <description>Living, adaptive, unfinished. Can sprout and bloom, but is vulnerable to decay and neglect.</description>
+    <layerType>Material</layerType>
+    <titleSuffix>Sprout</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="PlantWorkSpeed">0.25</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Plants</skill>
+        <amount>3</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="MoveSpeed">0.50</li>
+      <li Key="MeleeDodgeChance">0.10</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Steel Material -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Material_Steel</defName>
+    <label>Steel Constitution</label>
+    <description>Forged, committed, defined. Offers locked-in, robust bonuses and predictable, stable performance.</description>
+    <layerType>Material</layerType>
+    <titleSuffix>Iron</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="WorkSpeedGlobal">0.15</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Crafting</skill>
+        <amount>3</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="ArmorRating_Sharp">0.15</li>
+      <li Key="ArmorRating_Blunt">0.15</li>
+      <li Key="PainShockThreshold">0.10</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+  <!-- Jade Material -->
+  <RimWorldCultivation.CultivationLayerDef>
+    <defName>Material_Jade</defName>
+    <label>Jade Constitution</label>
+    <description>Slow-formed, perfected, revealed. Highest permanence and psychic resilience, but takes longest to mature.</description>
+    <layerType>Material</layerType>
+    <titleSuffix>Jade</titleSuffix>
+    <passiveStatOffsets>
+      <li Key="PsychicSensitivity">0.30</li>
+    </passiveStatOffsets>
+    <civilianSkillPulls>
+      <li>
+        <skill>Artistic</skill>
+        <amount>3</amount>
+      </li>
+    </civilianSkillPulls>
+    <combatStatOffsets>
+      <li Key="PainShockThreshold">0.30</li>
+      <li Key="MentalBreakThreshold">-0.08</li>
+    </combatStatOffsets>
+  </RimWorldCultivation.CultivationLayerDef>
+
+</Defs>
