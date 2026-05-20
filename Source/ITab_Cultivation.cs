@@ -4,6 +4,7 @@ using RimWorld;
 
 namespace RimWorldCultivation
 {
+    [StaticConstructorOnStartup]
     public class ITab_Cultivation : ITab
     {
         private static readonly Vector2 WinSize = new Vector2(420f, 350f);

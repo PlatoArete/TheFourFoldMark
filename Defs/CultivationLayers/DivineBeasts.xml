@@ -114,42 +114,72 @@
     <defName>Ability_SovereignBreath</defName>
     <label>Sovereign Breath</label>
     <description>Unleash a supernatural cone of destructive force.</description>
-    <cooldownTicks>12000</cooldownTicks> <!-- 2 days -->
+    <cooldownTicksRange>12000</cooldownTicksRange> <!-- 2 hours in-game -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15</range>
+      <warmupTime>1.0</warmupTime>
+    </verbProperties>
   </AbilityDef>
 
   <AbilityDef>
     <defName>Ability_SovereignImmolation</defName>
     <label>Sovereign Immolation</label>
     <description>Sacrifice the physical body to heal and stabilize all nearby allies.</description>
-    <cooldownTicks>36000</cooldownTicks> <!-- 6 days -->
+    <cooldownTicksRange>36000</cooldownTicksRange> <!-- 6 hours in-game -->
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>2.0</warmupTime>
+    </verbProperties>
   </AbilityDef>
 
   <AbilityDef>
     <defName>Ability_NineTailMirage</defName>
     <label>Nine-Tail Mirage</label>
     <description>Blink to a nearby position, leaving an illusion that attracts aggro.</description>
-    <cooldownTicks>2500</cooldownTicks>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15</range>
+      <warmupTime>0.2</warmupTime>
+    </verbProperties>
   </AbilityDef>
 
   <AbilityDef>
     <defName>Ability_GuardianGate</defName>
     <label>Guardian Gate</label>
     <description>Create a temporary force barrier protecting a chokepoint.</description>
-    <cooldownTicks>6000</cooldownTicks>
+    <cooldownTicksRange>6000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8</range>
+      <warmupTime>1.5</warmupTime>
+    </verbProperties>
   </AbilityDef>
 
   <AbilityDef>
     <defName>Ability_StoneGaze</defName>
     <label>Stone-Gaze Mandate</label>
     <description>Petrify and stun targets in a direct line of sight.</description>
-    <cooldownTicks>5000</cooldownTicks>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12</range>
+      <warmupTime>0.5</warmupTime>
+    </verbProperties>
   </AbilityDef>
 
   <AbilityDef>
     <defName>Ability_SanctuaryPath</defName>
     <label>Sanctuary Path</label>
     <description>Create a path of protection that guides and stabilizes retreating allies.</description>
-    <cooldownTicks>4000</cooldownTicks>
+    <cooldownTicksRange>4000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>10</range>
+      <warmupTime>1.0</warmupTime>
+    </verbProperties>
   </AbilityDef>
 
 </Defs>
