@@ -8,7 +8,7 @@ namespace RimWorldCultivation
     [StaticConstructorOnStartup]
     public class ITab_Cultivation : ITab
     {
-        private static readonly Vector2 WinSize = new Vector2(420f, 350f);
+        private static readonly Vector2 WinSize = new Vector2(420f, 420f);
 
         private static readonly Texture2D QiBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.15f, 0.45f, 0.75f));
         private static readonly Texture2D ProgressBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.6f, 0.2f));
