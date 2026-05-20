@@ -11,7 +11,7 @@ namespace RimWorldCultivation
     {
         private readonly CompCultivation comp;
 
-        public override Vector2 InitialSize => new Vector2(650f, 400f);
+        public override Vector2 InitialSize => new Vector2(700f, 420f);
 
         public Dialog_Breakthrough(CompCultivation comp)
         {
@@ -106,7 +106,7 @@ namespace RimWorldCultivation
                 Text.Font = GameFont.Small;
 
                 // Select Button
-                Rect selectBtnRect = new Rect(innerRect.x, innerRect.yMax - 30f, innerRect.width, 30f);
+                Rect selectBtnRect = new Rect(0f, innerRect.height - 30f, innerRect.width, 30f);
                 if (Widgets.ButtonText(selectBtnRect, "Align"))
                 {
                     onSelect(def);
