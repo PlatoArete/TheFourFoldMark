@@ -84,7 +84,10 @@ namespace RimWorldCultivation
                     colListing.Label("Passive Bonuses:");
                     foreach (StatModifier mod in def.passiveStatOffsets)
                     {
-                        colListing.Label($" - {mod.stat.LabelCap}: +{mod.ValueToStringAsOffset}");
+                        if (mod.stat != null)
+                        {
+                            colListing.Label($" - {mod.stat.LabelCap}: +{mod.ValueToStringAsOffset}");
+                        }
                     }
                     colListing.Gap(6f);
                 }
@@ -94,7 +97,10 @@ namespace RimWorldCultivation
                     colListing.Label("Active Combat Bonuses:");
                     foreach (StatModifier mod in def.combatStatOffsets)
                     {
-                        colListing.Label($" - {mod.stat.LabelCap}: {mod.ValueToStringAsOffset}");
+                        if (mod.stat != null)
+                        {
+                            colListing.Label($" - {mod.stat.LabelCap}: {mod.ValueToStringAsOffset}");
+                        }
                     }
                 }
                 Text.Font = GameFont.Small;

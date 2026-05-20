@@ -9,7 +9,10 @@
     <layerType>Element</layerType>
     <titleSuffix>Wind</titleSuffix>
     <passiveStatOffsets>
-      <li Key="CleaningSpeed">0.25</li>
+      <li>
+        <stat>CleaningSpeed</stat>
+        <value>0.25</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -18,8 +21,14 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="MoveSpeed">0.60</li>
-      <li Key="MeleeDodgeChance">0.15</li>
+      <li>
+        <stat>MoveSpeed</stat>
+        <value>0.60</value>
+      </li>
+      <li>
+        <stat>MeleeDodgeChance</stat>
+        <value>0.15</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -31,8 +40,14 @@
     <layerType>Element</layerType>
     <titleSuffix>Blaze</titleSuffix>
     <passiveStatOffsets>
-      <li Key="CookSpeed">0.20</li>
-      <li Key="SmeltingSpeed">0.20</li>
+      <li>
+        <stat>CookSpeed</stat>
+        <value>0.20</value>
+      </li>
+      <li>
+        <stat>SmeltingSpeed</stat>
+        <value>0.20</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -41,8 +56,14 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="MeleeDamageMultiplier">0.20</li>
-      <li Key="RangedWeaponDpsMultiplier" /> <!-- We can handle custom stats via StatPart if needed -->
+      <li>
+        <stat>MeleeDamageFactor</stat>
+        <value>0.20</value>
+      </li>
+      <li>
+        <stat>RangedWeapon_WarmupMultiplier</stat>
+        <value>-0.15</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -54,8 +75,14 @@
     <layerType>Element</layerType>
     <titleSuffix>River</titleSuffix>
     <passiveStatOffsets>
-      <li Key="RestRateMultiplier">0.15</li>
-      <li Key="MedicalSurgerySuccessChance">0.15</li>
+      <li>
+        <stat>RestRateMultiplier</stat>
+        <value>0.15</value>
+      </li>
+      <li>
+        <stat>MedicalSurgerySuccessChance</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -64,9 +91,18 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="ArmorRating_Sharp">0.10</li>
-      <li Key="ArmorRating_Blunt">0.10</li>
-      <li Key="MeleeDodgeChance">0.05</li>
+      <li>
+        <stat>ArmorRating_Sharp</stat>
+        <value>0.10</value>
+      </li>
+      <li>
+        <stat>ArmorRating_Blunt</stat>
+        <value>0.10</value>
+      </li>
+      <li>
+        <stat>MeleeDodgeChance</stat>
+        <value>0.05</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 

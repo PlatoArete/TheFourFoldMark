@@ -9,8 +9,14 @@
     <layerType>Mark</layerType>
     <titleSuffix>Wall</titleSuffix>
     <passiveStatOffsets>
-      <li Key="MiningSpeed">0.20</li>
-      <li Key="ConstructionSpeed">0.20</li>
+      <li>
+        <stat>MiningSpeed</stat>
+        <value>0.20</value>
+      </li>
+      <li>
+        <stat>ConstructionSpeed</stat>
+        <value>0.20</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -23,9 +29,18 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="ArmorRating_Sharp">0.25</li>
-      <li Key="ArmorRating_Blunt">0.25</li>
-      <li Key="MoveSpeed">-0.60</li>
+      <li>
+        <stat>ArmorRating_Sharp</stat>
+        <value>0.25</value>
+      </li>
+      <li>
+        <stat>ArmorRating_Blunt</stat>
+        <value>0.25</value>
+      </li>
+      <li>
+        <stat>MoveSpeed</stat>
+        <value>-0.60</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -37,7 +52,10 @@
     <layerType>Mark</layerType>
     <titleSuffix>Shadow</titleSuffix>
     <passiveStatOffsets>
-      <li Key="TradePriceImprovement">0.10</li>
+      <li>
+        <stat>TradePriceImprovement</stat>
+        <value>0.10</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -50,8 +68,14 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="MeleeDodgeChance">0.15</li>
-      <li Key="MeleeHitChance">0.10</li>
+      <li>
+        <stat>MeleeDodgeChance</stat>
+        <value>0.15</value>
+      </li>
+      <li>
+        <stat>MeleeHitChance</stat>
+        <value>0.10</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -63,7 +87,10 @@
     <layerType>Mark</layerType>
     <titleSuffix>Scholar</titleSuffix>
     <passiveStatOffsets>
-      <li Key="ResearchSpeed">0.15</li>
+      <li>
+        <stat>ResearchSpeed</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -76,7 +103,10 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="ShootingAccuracyPawn">2.50</li>
+      <li>
+        <stat>ShootingAccuracyPawn</stat>
+        <value>2.50</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -88,7 +118,10 @@
     <layerType>Mark</layerType>
     <titleSuffix>Claw</titleSuffix>
     <passiveStatOffsets>
-      <li Key="TameAnimalChance">0.15</li>
+      <li>
+        <stat>TameAnimalChance</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -101,7 +134,10 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="MeleeDamageMultiplier">0.25</li>
+      <li>
+        <stat>MeleeDamageFactor</stat>
+        <value>0.25</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -113,7 +149,10 @@
     <layerType>Mark</layerType>
     <titleSuffix>Fang</titleSuffix>
     <passiveStatOffsets>
-      <li Key="TrainAnimalChance">0.15</li>
+      <li>
+        <stat>TrainAnimalChance</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -126,8 +165,14 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="MoveSpeed">0.40</li>
-      <li Key="MeleeHitChance">0.05</li>
+      <li>
+        <stat>MoveSpeed</stat>
+        <value>0.40</value>
+      </li>
+      <li>
+        <stat>MeleeHitChance</stat>
+        <value>0.05</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -139,7 +184,10 @@
     <layerType>Mark</layerType>
     <titleSuffix>feather</titleSuffix>
     <passiveStatOffsets>
-      <li Key="MedicalTendQuality">0.15</li>
+      <li>
+        <stat>MedicalTendQuality</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -152,8 +200,14 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li Key="MeleeDodgeChance">0.10</li>
-      <li Key="ShootingAccuracyPawn">1.50</li>
+      <li>
+        <stat>MeleeDodgeChance</stat>
+        <value>0.10</value>
+      </li>
+      <li>
+        <stat>ShootingAccuracyPawn</stat>
+        <value>1.50</value>
+      </li>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 

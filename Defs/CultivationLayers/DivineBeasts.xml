@@ -9,10 +9,16 @@
     <layerType>DivineBeast</layerType>
     <titleSuffix>Dragon</titleSuffix>
     <passiveStatOffsets>
-      <li Key="SocialImpact">0.15</li>
+      <li>
+        <stat>SocialImpact</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <combatStatOffsets>
-      <li Key="MentalBreakThreshold">-0.05</li>
+      <li>
+        <stat>MentalBreakThreshold</stat>
+        <value>-0.05</value>
+      </li>
     </combatStatOffsets>
     <grantedAbilities>
       <li>Ability_SovereignBreath</li>
@@ -27,10 +33,16 @@
     <layerType>DivineBeast</layerType>
     <titleSuffix>Phoenix</titleSuffix>
     <passiveStatOffsets>
-      <li Key="MedicalTendSpeed">0.15</li>
+      <li>
+        <stat>MedicalTendSpeed</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <combatStatOffsets>
-      <li Key="MedicalTendQuality">0.15</li>
+      <li>
+        <stat>MedicalTendQuality</stat>
+        <value>0.15</value>
+      </li>
     </combatStatOffsets>
     <grantedAbilities>
       <li>Ability_SovereignImmolation</li>
@@ -45,10 +57,16 @@
     <layerType>DivineBeast</layerType>
     <titleSuffix>Mirage</titleSuffix>
     <passiveStatOffsets>
-      <li Key="NegotiationAbility">0.15</li>
+      <li>
+        <stat>NegotiationAbility</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <combatStatOffsets>
-      <li Key="MeleeDodgeChance">0.20</li>
+      <li>
+        <stat>MeleeDodgeChance</stat>
+        <value>0.20</value>
+      </li>
     </combatStatOffsets>
     <grantedAbilities>
       <li>Ability_NineTailMirage</li>
@@ -63,10 +81,16 @@
     <layerType>DivineBeast</layerType>
     <titleSuffix>Gate</titleSuffix>
     <passiveStatOffsets>
-      <li Key="GeneralLaborSpeed">0.15</li>
+      <li>
+        <stat>GeneralLaborSpeed</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <combatStatOffsets>
-      <li Key="ArmorRating_Sharp">0.20</li>
+      <li>
+        <stat>ArmorRating_Sharp</stat>
+        <value>0.20</value>
+      </li>
     </combatStatOffsets>
     <grantedAbilities>
       <li>Ability_GuardianGate</li>
@@ -81,10 +105,16 @@
     <layerType>DivineBeast</layerType>
     <titleSuffix>Gaze</titleSuffix>
     <passiveStatOffsets>
-      <li Key="ToxicResistance">0.20</li>
+      <li>
+        <stat>ToxicResistance</stat>
+        <value>0.20</value>
+      </li>
     </passiveStatOffsets>
     <combatStatOffsets>
-      <li Key="ToxicEnvironmentResistance">0.20</li>
+      <li>
+        <stat>ToxicEnvironmentResistance</stat>
+        <value>0.20</value>
+      </li>
     </combatStatOffsets>
     <grantedAbilities>
       <li>Ability_StoneGaze</li>
@@ -99,10 +129,16 @@
     <layerType>DivineBeast</layerType>
     <titleSuffix>Hart</titleSuffix>
     <passiveStatOffsets>
-      <li Key="AnimalGatherSpeed">0.15</li>
+      <li>
+        <stat>AnimalGatherSpeed</stat>
+        <value>0.15</value>
+      </li>
     </passiveStatOffsets>
     <combatStatOffsets>
-      <li Key="MoveSpeed">0.50</li>
+      <li>
+        <stat>MoveSpeed</stat>
+        <value>0.50</value>
+      </li>
     </combatStatOffsets>
     <grantedAbilities>
       <li>Ability_SanctuaryPath</li>
