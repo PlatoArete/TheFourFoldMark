@@ -9,10 +9,7 @@
     <layerType>Element</layerType>
     <titleSuffix>Wind</titleSuffix>
     <passiveStatOffsets>
-      <li>
-        <stat>CleaningSpeed</stat>
-        <value>0.25</value>
-      </li>
+      <CleaningSpeed>0.25</CleaningSpeed>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -21,14 +18,8 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li>
-        <stat>MoveSpeed</stat>
-        <value>0.60</value>
-      </li>
-      <li>
-        <stat>MeleeDodgeChance</stat>
-        <value>0.15</value>
-      </li>
+      <MoveSpeed>0.60</MoveSpeed>
+      <MeleeDodgeChance>0.15</MeleeDodgeChance>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -40,14 +31,8 @@
     <layerType>Element</layerType>
     <titleSuffix>Blaze</titleSuffix>
     <passiveStatOffsets>
-      <li>
-        <stat>CookSpeed</stat>
-        <value>0.20</value>
-      </li>
-      <li>
-        <stat>SmeltingSpeed</stat>
-        <value>0.20</value>
-      </li>
+      <CookSpeed>0.20</CookSpeed>
+      <SmeltingSpeed>0.20</SmeltingSpeed>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -56,14 +41,8 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li>
-        <stat>MeleeDamageFactor</stat>
-        <value>0.20</value>
-      </li>
-      <li>
-        <stat>RangedWeapon_WarmupMultiplier</stat>
-        <value>-0.15</value>
-      </li>
+      <MeleeDamageFactor>0.20</MeleeDamageFactor>
+      <RangedWeapon_WarmupMultiplier>-0.15</RangedWeapon_WarmupMultiplier>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -75,14 +54,8 @@
     <layerType>Element</layerType>
     <titleSuffix>River</titleSuffix>
     <passiveStatOffsets>
-      <li>
-        <stat>RestRateMultiplier</stat>
-        <value>0.15</value>
-      </li>
-      <li>
-        <stat>MedicalSurgerySuccessChance</stat>
-        <value>0.15</value>
-      </li>
+      <RestRateMultiplier>0.15</RestRateMultiplier>
+      <MedicalSurgerySuccessChance>0.15</MedicalSurgerySuccessChance>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -91,18 +64,9 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li>
-        <stat>ArmorRating_Sharp</stat>
-        <value>0.10</value>
-      </li>
-      <li>
-        <stat>ArmorRating_Blunt</stat>
-        <value>0.10</value>
-      </li>
-      <li>
-        <stat>MeleeDodgeChance</stat>
-        <value>0.05</value>
-      </li>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <MeleeDodgeChance>0.05</MeleeDodgeChance>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 

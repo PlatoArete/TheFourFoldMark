@@ -9,10 +9,7 @@
     <layerType>Material</layerType>
     <titleSuffix>Sprout</titleSuffix>
     <passiveStatOffsets>
-      <li>
-        <stat>PlantWorkSpeed</stat>
-        <value>0.25</value>
-      </li>
+      <PlantWorkSpeed>0.25</PlantWorkSpeed>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -21,14 +18,8 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li>
-        <stat>MoveSpeed</stat>
-        <value>0.50</value>
-      </li>
-      <li>
-        <stat>MeleeDodgeChance</stat>
-        <value>0.10</value>
-      </li>
+      <MoveSpeed>0.50</MoveSpeed>
+      <MeleeDodgeChance>0.10</MeleeDodgeChance>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -40,10 +31,7 @@
     <layerType>Material</layerType>
     <titleSuffix>Iron</titleSuffix>
     <passiveStatOffsets>
-      <li>
-        <stat>WorkSpeedGlobal</stat>
-        <value>0.15</value>
-      </li>
+      <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -52,18 +40,9 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li>
-        <stat>ArmorRating_Sharp</stat>
-        <value>0.15</value>
-      </li>
-      <li>
-        <stat>ArmorRating_Blunt</stat>
-        <value>0.15</value>
-      </li>
-      <li>
-        <stat>PainShockThreshold</stat>
-        <value>0.10</value>
-      </li>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <PainShockThreshold>0.10</PainShockThreshold>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
@@ -75,10 +54,7 @@
     <layerType>Material</layerType>
     <titleSuffix>Jade</titleSuffix>
     <passiveStatOffsets>
-      <li>
-        <stat>PsychicSensitivity</stat>
-        <value>0.30</value>
-      </li>
+      <PsychicSensitivity>0.30</PsychicSensitivity>
     </passiveStatOffsets>
     <civilianSkillPulls>
       <li>
@@ -87,14 +63,8 @@
       </li>
     </civilianSkillPulls>
     <combatStatOffsets>
-      <li>
-        <stat>PainShockThreshold</stat>
-        <value>0.30</value>
-      </li>
-      <li>
-        <stat>MentalBreakThreshold</stat>
-        <value>-0.08</value>
-      </li>
+      <PainShockThreshold>0.30</PainShockThreshold>
+      <MentalBreakThreshold>-0.08</MentalBreakThreshold>
     </combatStatOffsets>
   </RimWorldCultivation.CultivationLayerDef>
 
