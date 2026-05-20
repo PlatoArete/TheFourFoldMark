@@ -103,7 +103,7 @@ namespace RimWorldCultivation
 
             if (layerDef.combatStatOffsets != null && layerDef.combatStatOffsets.Count > 0)
             {
-                sb.AppendLine("  Combat stats (needs Qi Release):");
+                sb.AppendLine("  Combat stats (doubled when Qi Released):");
                 foreach (StatModifier modifier in layerDef.combatStatOffsets)
                 {
                     if (modifier.stat != null)

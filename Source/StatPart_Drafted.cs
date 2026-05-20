@@ -15,20 +15,20 @@ namespace RimWorldCultivation
                 if (comp != null)
                 {
                     float totalOffset = 0f;
-                    bool isCombat = (pawn.Drafted || pawn.InMentalState) && comp.qiReleaseActive;
+                    bool qiActive = comp.qiReleaseActive;
 
                     // Accumulate from all active layers
-                    this.AccumulateOffsets(comp.markDef, this.parentStat, isCombat, ref totalOffset);
-                    this.AccumulateOffsets(comp.materialDef, this.parentStat, isCombat, ref totalOffset);
-                    this.AccumulateOffsets(comp.elementDef, this.parentStat, isCombat, ref totalOffset);
-                    this.AccumulateOffsets(comp.beastDef, this.parentStat, isCombat, ref totalOffset);
+                    this.AccumulateOffsets(comp.markDef, this.parentStat, qiActive, ref totalOffset);
+                    this.AccumulateOffsets(comp.materialDef, this.parentStat, qiActive, ref totalOffset);
+                    this.AccumulateOffsets(comp.elementDef, this.parentStat, qiActive, ref totalOffset);
+                    this.AccumulateOffsets(comp.beastDef, this.parentStat, qiActive, ref totalOffset);
 
                     val += totalOffset;
                 }
             }
         }
 
-        private void AccumulateOffsets(CultivationLayerDef layerDef, StatDef stat, bool isCombat, ref float totalOffset)
+        private void AccumulateOffsets(CultivationLayerDef layerDef, StatDef stat, bool qiActive, ref float totalOffset)
         {
             if (layerDef == null)
             {
@@ -47,14 +47,18 @@ namespace RimWorldCultivation
                 }
             }
 
-            // Combat stats are only active when drafted or in mental state
-            if (isCombat && layerDef.combatStatOffsets != null)
+            // Combat stats are always on at base value, and doubled when Qi Release is active
+            if (layerDef.combatStatOffsets != null)
             {
                 foreach (StatModifier modifier in layerDef.combatStatOffsets)
                 {
                     if (modifier.stat == stat)
                     {
                         totalOffset += modifier.value;
+                        if (qiActive)
+                        {
+                            totalOffset += modifier.value; // Double the bonus
+                        }
                     }
                 }
             }
@@ -68,33 +72,28 @@ namespace RimWorldCultivation
                 if (comp != null)
                 {
                     float passiveOffset = 0f;
-                    float combatOffset = 0f;
-                    bool isCombat = (pawn.Drafted || pawn.InMentalState) && comp.qiReleaseActive;
+                    float baseCombatOffset = 0f;
+                    float stanceBoostOffset = 0f;
+                    bool qiActive = comp.qiReleaseActive;
 
-                    // Calculate breakdown for explanation
-                    this.AccumulateOffsets(comp.markDef, this.parentStat, false, ref passiveOffset);
-                    this.AccumulateOffsets(comp.materialDef, this.parentStat, false, ref passiveOffset);
-                    this.AccumulateOffsets(comp.elementDef, this.parentStat, false, ref passiveOffset);
-                    this.AccumulateOffsets(comp.beastDef, this.parentStat, false, ref passiveOffset);
-
-                    if (isCombat)
-                    {
-                        float total = 0f;
-                        this.AccumulateOffsets(comp.markDef, this.parentStat, true, ref total);
-                        this.AccumulateOffsets(comp.materialDef, this.parentStat, true, ref total);
-                        this.AccumulateOffsets(comp.elementDef, this.parentStat, true, ref total);
-                        this.AccumulateOffsets(comp.beastDef, this.parentStat, true, ref total);
-                        combatOffset = total - passiveOffset;
-                    }
+                    // Calculate detailed breakdowns
+                    this.CalculateDetailedOffsets(comp.markDef, this.parentStat, qiActive, ref passiveOffset, ref baseCombatOffset, ref stanceBoostOffset);
+                    this.CalculateDetailedOffsets(comp.materialDef, this.parentStat, qiActive, ref passiveOffset, ref baseCombatOffset, ref stanceBoostOffset);
+                    this.CalculateDetailedOffsets(comp.elementDef, this.parentStat, qiActive, ref passiveOffset, ref baseCombatOffset, ref stanceBoostOffset);
+                    this.CalculateDetailedOffsets(comp.beastDef, this.parentStat, qiActive, ref passiveOffset, ref baseCombatOffset, ref stanceBoostOffset);
 
                     List<string> lines = new List<string>();
                     if (passiveOffset != 0f)
                     {
                         lines.Add("Cultivation passive: " + this.parentStat.ValueToString(passiveOffset, ToStringNumberSense.Offset));
                     }
-                    if (isCombat && combatOffset != 0f)
+                    if (baseCombatOffset != 0f)
                     {
-                        lines.Add("Cultivation combat: " + this.parentStat.ValueToString(combatOffset, ToStringNumberSense.Offset));
+                        lines.Add("Cultivation base combat: " + this.parentStat.ValueToString(baseCombatOffset, ToStringNumberSense.Offset));
+                    }
+                    if (stanceBoostOffset != 0f)
+                    {
+                        lines.Add("Cultivation Qi stance boost: " + this.parentStat.ValueToString(stanceBoostOffset, ToStringNumberSense.Offset));
                     }
 
                     if (lines.Count > 0)
@@ -104,6 +103,37 @@ namespace RimWorldCultivation
                 }
             }
             return null;
+        }
+
+        private void CalculateDetailedOffsets(CultivationLayerDef layerDef, StatDef stat, bool qiActive, ref float passive, ref float baseCombat, ref float stanceBoost)
+        {
+            if (layerDef == null) return;
+
+            if (layerDef.passiveStatOffsets != null)
+            {
+                foreach (StatModifier modifier in layerDef.passiveStatOffsets)
+                {
+                    if (modifier.stat == stat)
+                    {
+                        passive += modifier.value;
+                    }
+                }
+            }
+
+            if (layerDef.combatStatOffsets != null)
+            {
+                foreach (StatModifier modifier in layerDef.combatStatOffsets)
+                {
+                    if (modifier.stat == stat)
+                    {
+                        baseCombat += modifier.value;
+                        if (qiActive)
+                        {
+                            stanceBoost += modifier.value;
+                        }
+                    }
+                }
+            }
         }
     }
 
