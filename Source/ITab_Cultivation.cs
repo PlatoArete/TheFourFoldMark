@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using Verse;
 using RimWorld;
 
@@ -124,6 +125,53 @@ namespace RimWorldCultivation
             listing.Label($"3. KINETIC ELEMENT: {(comp.elementDef != null ? comp.elementDef.label : "Locked (Awaiting Breakthrough)")}");
             listing.Label($"4. DIVINE BEAST ALIGNMENT: {(comp.beastDef != null ? comp.beastDef.label : "Locked (Perform Connection Ritual)")}");
             Text.Font = GameFont.Small;
+
+            if (Prefs.DevMode)
+            {
+                listing.Gap(10f);
+                Widgets.DrawLineHorizontal(rect.x, listing.CurHeight, rect.width);
+                listing.Gap(5f);
+                Text.Font = GameFont.Tiny;
+                listing.Label("DEV MODE CHEATS:");
+                Rect devRow = listing.GetRect(24f);
+                float btnWidth = devRow.width / 4f;
+                if (Widgets.ButtonText(new Rect(devRow.x, devRow.y, btnWidth - 5f, devRow.height), "Set Layer"))
+                {
+                    List<FloatMenuOption> options = new List<FloatMenuOption>();
+                    foreach (CultivationLayerDef def in DefDatabase<CultivationLayerDef>.AllDefs)
+                    {
+                        options.Add(new FloatMenuOption($"{def.layerType}: {def.label}", () =>
+                        {
+                            if (def.layerType == CultivationLayerType.Mark) comp.markDef = def;
+                            else if (def.layerType == CultivationLayerType.Material) comp.materialDef = def;
+                            else if (def.layerType == CultivationLayerType.Element) comp.elementDef = def;
+                            else if (def.layerType == CultivationLayerType.DivineBeast) comp.beastDef = def;
+                            comp.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+                        }));
+                    }
+                    Find.WindowStack.Add(new FloatMenu(options));
+                }
+                if (Widgets.ButtonText(new Rect(devRow.x + btnWidth, devRow.y, btnWidth - 5f, devRow.height), "+Qi Progress"))
+                {
+                    comp.qiProgress = 100f;
+                }
+                if (Widgets.ButtonText(new Rect(devRow.x + 2 * btnWidth, devRow.y, btnWidth - 5f, devRow.height), "Max Qi"))
+                {
+                    comp.qiCurrent = comp.qiMax;
+                }
+                if (Widgets.ButtonText(new Rect(devRow.x + 3 * btnWidth, devRow.y, btnWidth - 5f, devRow.height), "Reset All"))
+                {
+                    comp.markDef = null;
+                    comp.materialDef = null;
+                    comp.elementDef = null;
+                    comp.beastDef = null;
+                    comp.qiProgress = 0f;
+                    comp.qiCurrent = 0f;
+                    comp.qiReleaseActive = false;
+                    comp.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+                }
+                Text.Font = GameFont.Small;
+            }
 
             listing.End();
         }
