@@ -66,6 +66,38 @@ namespace RimWorldCultivation
             return string.Join(" ", parts);
         }
 
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            this.UpdateHediffState();
+        }
+
+        public void UpdateHediffState()
+        {
+            if (this.Pawn == null || this.Pawn.Dead || this.Pawn.health == null) return;
+
+            bool hasAnyLayer = this.markDef != null || this.materialDef != null || this.elementDef != null || this.beastDef != null;
+            HediffDef hediffDef = HediffDef.Named("CultivationState");
+
+            Hediff existing = this.Pawn.health.hediffSet?.GetFirstHediffOfDef(hediffDef);
+
+            if (hasAnyLayer)
+            {
+                if (existing == null)
+                {
+                    Hediff newHediff = HediffMaker.MakeHediff(hediffDef, this.Pawn);
+                    this.Pawn.health.AddHediff(newHediff);
+                }
+            }
+            else
+            {
+                if (existing != null)
+                {
+                    this.Pawn.health.RemoveHediff(existing);
+                }
+            }
+        }
+
         public override void CompTick()
         {
             base.CompTick();
@@ -87,6 +119,11 @@ namespace RimWorldCultivation
                     this.qiCurrent = Math.Min(this.qiMax, this.qiCurrent + 0.0015f);
                     this.qiProgress = Math.Min(100f, this.qiProgress + 0.0015f);
                 }
+            }
+
+            if (this.Pawn.IsHashIntervalTick(60))
+            {
+                this.UpdateHediffState();
             }
         }
 

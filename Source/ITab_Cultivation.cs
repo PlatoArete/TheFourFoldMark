@@ -147,6 +147,7 @@ namespace RimWorldCultivation
                             else if (def.layerType == CultivationLayerType.Element) comp.elementDef = def;
                             else if (def.layerType == CultivationLayerType.DivineBeast) comp.beastDef = def;
                             comp.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+                            comp.UpdateHediffState();
                         }));
                     }
                     Find.WindowStack.Add(new FloatMenu(options));
@@ -169,6 +170,7 @@ namespace RimWorldCultivation
                     comp.qiCurrent = 0f;
                     comp.qiReleaseActive = false;
                     comp.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+                    comp.UpdateHediffState();
                 }
                 Text.Font = GameFont.Small;
             }

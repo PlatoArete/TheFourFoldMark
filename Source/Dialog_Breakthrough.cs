@@ -112,6 +112,7 @@ namespace RimWorldCultivation
                     onSelect(def);
                     comp.qiProgress = 0f; // Reset progress bar for next tier
                     comp.Pawn.Drawer.renderer.SetAllGraphicsDirty();
+                    comp.UpdateHediffState();
                     
                     SoundDefOf.Click.PlayOneShotOnCamera();
                     Messages.Message($"{comp.Pawn.Name.ToStringShort} has successfully aligned with the {def.label}!", comp.Pawn, MessageTypeDefOf.PositiveEvent);
